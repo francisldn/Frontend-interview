@@ -1,0 +1,2 @@
+# Sample React Interview Questions
+The purpose of this repo is to store React interview questions which I come across based on other developers' experiences. Each folder represent a sample React interview question.
