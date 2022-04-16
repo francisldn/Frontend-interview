@@ -12,12 +12,12 @@ async function fetchAPI() {
   const fragment = document.createDocumentFragment()
   data.map(({title}) => {
         // create p tag
-        let testimonialElement = document.createElement('p')
+        let dataElement = document.createElement('p')
         // add class name = 'testimonal'
-        testimonialElement.classList.add('testimonial')
+        dataElement.classList.add('testimonial')
         // add element
-        testimonialElement.textContent = title;
-        fragment.appendChild(testimonialElement)
+        dataElement.textContent = title;
+        fragment.appendChild(dataElement)
     })
   div.appendChild(fragment)
 }

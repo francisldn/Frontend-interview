@@ -1,3 +1,5 @@
+// this challenge corresponds to a different API
+
 const API_BASE_URL = `https://www.algoexpert.io/api/testimonials`
 const PAGE_SIZE = 5;
 let afterID= null;
@@ -48,9 +50,11 @@ async function fetchAndAppendTestimonials() {
 
   const fragment = document.createDocumentFragment();
   testimonials.map(({message}) => {
-      fragment.appendChild(`<p class="testimonial">${message}</p>`)
+    let testimonialElement = document.createElement('p');
+    testimonialElement.classList.add('testimonial')
+    testimonialElement.textContent = message;
+    fragment.appendChild(testimonialElement)
     })
-  console.log(fragment);
   div.appendChild(fragment)
     // find the last element data id
   if(hasNext) {
